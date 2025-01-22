@@ -1,0 +1,61 @@
+/* Task List */
+.task-list li {
+    /* ... other styles ... */
+    align-items: center;          /* Center items vertically */
+    margin-bottom: 20px;         /* More space between tasks */
+}
+
+.task-name {
+    flex-grow: 1;                /* Allow task name to take available space */
+    margin-right: 10px;
+}
+
+.task-due-date {
+    font-size: 0.9rem;
+    color: #555;
+    margin-right: 20px;         /* More space before actions */
+    white-space: nowrap;         /* Prevent date from wrapping */
+}
+
+.task-reminder-time {
+    font-size: 0.9rem;
+    color: #555;
+    margin-right: 20px;         /* More space before actions */
+    white-space: nowrap;         /* Prevent date from wrapping */
+}
+
+.task-actions {
+    display: flex;
+    align-items: center;          /* Center buttons vertically */
+    white-space: nowrap;         /* Prevent buttons from wrapping */
+}
+
+/* Add Task Form */
+.add-task-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.add-task-form input[type="text"] {
+    width: 100%;                 /* Wider task name input */
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.add-task-form input[type="datetime-local"] {
+    width: calc(50% - 10px);   /* Adjust width as needed */
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.add-task-form button {
+    /* ... button styles ... */
+    margin-top: 10px;            /* Add margin above the button */
+}

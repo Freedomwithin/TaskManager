@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Task{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Edit Task</h1>
+<form method="POST">
+    <div class="form-group">
+        <label for="name">Task Name</label>
+        <input type="text" class="form-control" id="name" name="name" value="{{ task.name }}" required>
+    </div>
+    <div class="form-group">
+        <label for="due_date">Due Date</label>
+        <input type="datetime-local" class="form-control" id="due_date" name="due_date" value="{{ task.due_date.strftime('%Y-%m-%dT%H:%M') if task.due_date else '' }}">
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" name="description" rows="3">{{ task.description }}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Task</button>
+</form>
+{% endblock %}

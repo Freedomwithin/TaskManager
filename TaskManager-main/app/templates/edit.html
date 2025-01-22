@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Task</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="#" id="dark-mode-stylesheet">
+</head>
+<body>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>Edit Task</h1>
+
+        <div class="add-task-form">
+            <form method="POST" action="{{ url_for('routes.edit_task', task_id=task.id) }}">
+                <label for="task_name">Task name:</label>
+                <input type="text" id="task_name" name="task_name" value="{{ task.name }}"><br>
+
+                <label for="due_date">Due date:</label>
+                <input type="datetime-local" id="due_date" name="due_date" value="{{ task.due_date.strftime('%Y-%m-%dT%H:%M') if task.due_date else '' }}"><br>
+
+                <label for="reminder_time">Reminder Time:</label>
+                <input type="datetime-local" id="reminder_time" name="reminder_time" value="{{ task.reminder_time.strftime('%Y-%m-%dT%H:%M') if task.reminder_time else '' }}"><br>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("#due_date", {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+        });
+        flatpickr("#reminder_time", {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+        });
+    </script>
+    <script>
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const darkModeStylesheet = document.getElementById('dark-mode-stylesheet');
+        const storedTheme = localStorage.getItem('theme');
+
+        if (storedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            darkModeStylesheet.href = "{{ url_for('static', filename='dark-mode.css') }}";
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            if (document.body.classList.contains('dark-mode')) {
+                document.body.classList.remove('dark-mode');
+                darkModeStylesheet.href = '#';
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.body.classList.add('dark-mode');
+                darkModeStylesheet.href = "{{ url_for('static', filename='dark-mode.css') }}";
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+</body>
+</html>

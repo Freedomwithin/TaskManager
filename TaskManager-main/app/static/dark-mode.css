@@ -1,0 +1,91 @@
+:root {
+  --background-color: #121212; /* Dark background */
+  --container-background: #1e1e1e;
+  --text-color: #eee;
+  --accent-color: #0097e6; /* Adjust as needed */
+  --heading-color: #0077cc;
+  --list-background: #292929;
+  --list-border: #444;
+  --button-background: var(--accent-color);
+  --button-text: #fff;
+  --button-hover: #005fa3;
+  --footer-background: #1e1e1e;
+  --footer-text: #777;
+  --footer-border: #444;
+}
+
+body.dark-mode {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.dark-mode .container {
+    background-color: var(--container-background);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adjusted shadow for dark mode */
+}
+
+.dark-mode h1 {
+    color: var(--heading-color);
+}
+
+.dark-mode h2 {
+    color: var(--text-color);
+}
+
+.dark-mode li {
+    background-color: var(--list-background);
+    border-color: var(--list-border);
+}
+
+.dark-mode .add-task-form input[type="text"],
+.dark-mode .add-task-form input[type="datetime-local"] {
+    background-color: var(--container-background);
+    border-color: var(--list-border);
+    color: var(--text-color);
+}
+
+.dark-mode .add-task-form button {
+    background-color: var(--button-background);
+    color: var(--button-text);
+}
+
+.dark-mode .add-task-form button:hover {
+    background-color: var(--button-hover);
+}
+
+.dark-mode .task-actions .complete-btn,
+.dark-mode .task-actions .edit-btn,
+.dark-mode .task-actions .delete-btn {
+    color: var(--text-color);
+}
+
+.dark-mode .task-due-date {
+    color: var(--text-color);
+}
+
+.dark-mode footer {
+    background-color: var(--footer-background);
+    border-top: 1px solid var(--footer-border);
+}
+
+.dark-mode footer p {
+    color: var(--footer-text);
+}
+
+.dark-mode .complete-btn {
+    color: #0077cc;
+}
+
+.dark-mode .edit-btn {
+    color: #777;
+}
+
+.dark-mode .delete-btn {
+    color: #dc3545;
+}
+
+.dark-mode .complete-btn:hover,
+.dark-mode .edit-btn:hover,
+.dark-mode .delete-btn:hover {
+    background-color: rgba(200, 200, 200, 0.05);
+}
