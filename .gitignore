@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+*.venv
+.Python
+env/
+
+# Flask
+instance/
+.webassets-cache
+
+# Electron
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+electron.log
+app.log
+
+# Database
+*.sqlite
+*.db
+
+# Environment
+.env
+.vscode/
+.idea/
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Dependency directories
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Compiled files
+*.compiled
+*.min.js
