@@ -61,4 +61,4 @@ gunicorn --workers 3 --bind 0.0.0.0:5001 wsgi:app
 5. Open a Pull Request
 
 ## 📄 License
-MIT
+[MIT License](https://choosealicense.com/licenses/mit/)
