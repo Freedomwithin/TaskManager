@@ -49,10 +49,6 @@ Flask Server
 
 python run.py
 
-Electron App
-
-npm start
-
 ### Production Deployment
 
 gunicorn --workers 3 --bind 0.0.0.0:5001 wsgi:app
