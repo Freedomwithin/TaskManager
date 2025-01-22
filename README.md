@@ -25,7 +25,7 @@ A robust task management application built with Flask (backend) and Electron (de
 ## 📦 Setup Instructions
 
 ### Clone Repository
-git clone [your-github-repo-url]
+git clone https://github.com/Freedomwithin/TaskManager
 
 ### Python Environment Setup
 python -m venv venv
