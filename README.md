@@ -25,34 +25,33 @@ A robust task management application built with Flask (backend) and Electron (de
 ## 📦 Setup Instructions
 
 ### Clone Repository
+   ```bash
 git clone https://github.com/Freedomwithin/TaskManager
-
+   ```
 ### Python Environment Setup
 
+   ```bash
 cd Taskmanager-main
-
 python -m venv venv
-
 source venv/bin/activate
-
 pip install -r requirements.txt
-
+   ```
 ### Node Dependencies
-
+   ```bash
 npm install
-
+   ```
 ## 🚀 Running the Application
 
 ### Development Mode
 
 Flask Server
-
+   ```bash
 python run.py
-
+   ```
 ### Production Deployment
-
+   ```bash
 gunicorn --workers 3 --bind 0.0.0.0:5001 wsgi:app
-
+   ```
 ## 🤝 Contributing
 1. Fork the repository
 2. Create a feature branch
@@ -61,4 +60,4 @@ gunicorn --workers 3 --bind 0.0.0.0:5001 wsgi:app
 5. Open a Pull Request
 
 ## 📄 License
-[MIT License](https://choosealicense.com/licenses/mit/)
+This project is licensed under the MIT License - see the LICENSE.md file for details.
